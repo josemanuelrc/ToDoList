@@ -1,8 +1,15 @@
 <h4>New Task</h4>
 <form class="form-group" >
     <label for="name">Name: </label>
-    <input type="text" class="form-control" id="name">
+    <input type="text" class="form-control" id="name" name="description" [(ngModel)]="task.name">
     <label for="description">Description: </label>
-    <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
-    <button type="submit" class="btn btn-primary">Create Task</button>
+    <textarea 
+        class="form-control" 
+        id="description" 
+        name="description" 
+        [(ngModel)]="task.description"
+        cols="30" 
+        rows="10">
+    </textarea>
+    <button type="submit" class="btn btn-primary" (click)="onCreateTask()">Create Task</button>
 </form>

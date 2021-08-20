@@ -10,6 +10,8 @@ import { TaskItemComponent } from './tasks/task-list/task-item/task-item.compone
 import { NavComponent } from './nav/nav.component';
 import { LoginComponent } from './login/login.component';
 import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
+import { FormsModule } from '@angular/forms';
+import { TaskService } from './tasks/task.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,10 @@ import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
