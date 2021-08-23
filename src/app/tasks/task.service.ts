@@ -14,4 +14,7 @@ export class TaskService{
     public createTask(task: Task){
       this.tasks.push(task);
     }
+    public finishTask(index: number){
+      this.tasks.splice(index, 1);
+    }
 }

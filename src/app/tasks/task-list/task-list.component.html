@@ -1,7 +1,16 @@
-<h4>Task List</h4>
-<ul class="list-group">
-    <li class="list-group-item">
-        <app-task-item *ngFor="let task of tasks; let i=index;" [task]=task></app-task-item>   
-    </li>
-</ul>
-     
+<div class="container">
+    <h4>Tasks List</h4>
+    <ul *ngIf="tasks.length>0; else elseTemplate " class="list-group">
+        <li class="list-group-item">
+            <app-task-item 
+            *ngFor="let task of tasks; let i=index;" 
+            [task]=task
+            [index]=i>
+        </app-task-item>   
+        </li>
+    </ul>    
+    <ng-template #elseTemplate>
+        <p>There are no tasks</p>
+    </ng-template>
+</div>
+

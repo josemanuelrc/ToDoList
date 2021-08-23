@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Task } from 'src/app/shared/task.model';
+import { TaskService } from '../../task.service';
 
 @Component({
   selector: 'app-task-item',
@@ -8,10 +9,14 @@ import { Task } from 'src/app/shared/task.model';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task: Task;
-  constructor() { 
+  @Input() index: number;
+  constructor(private taskService: TaskService) { 
   }
 
   ngOnInit(): void {
   }
 
+  onFinishTask(){
+    this.taskService.finishTask(this.index);
+  }
 }

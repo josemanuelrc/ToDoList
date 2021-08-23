@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" id="appIcon" href="/favicon.ico" type="image/x-icon" />
   <title>To-Do List</title>
 </head>
 <body>
@@ -12,8 +13,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-8">
-        <app-task-edit></app-task-edit>
-        <app-task-list></app-task-list>
+        <router-outlet></router-outlet>
       </div>
       <div class="col-4">
         <app-login></app-login>

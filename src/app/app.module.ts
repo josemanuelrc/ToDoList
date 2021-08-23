@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from './tasks/task.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TaskService } from './tasks/task.service';
     TaskItemComponent,
     NavComponent,
     LoginComponent,
-    TaskEditComponent
+    TaskEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
