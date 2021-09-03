@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Task } from 'src/app/shared/task.model';
 import { TaskService } from '../task.service';
 
@@ -8,15 +8,16 @@ import { TaskService } from '../task.service';
   styleUrls: ['./task-edit.component.css']
 })
 export class TaskEditComponent implements OnInit {
-  task: Task;
+  @Input() name: string;
+  @Input() description: string;
 
   constructor(private taskService: TaskService) {
-    this.task=new Task("1","2");
+
   }
 
   public ngOnInit(): void {
   }
   public onCreateTask(){
-    this.taskService.createTask(this.task);
+    this.taskService.createTask(new Task(this.name,this.description));
   }
 }

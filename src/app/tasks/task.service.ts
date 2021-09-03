@@ -8,13 +8,13 @@ export class TaskService{
         new Task( "Tarea 2", "Tengo cosas que hacer"),
       ];
 
-    public getTasks(){
+    public getTasks() {
         return this.tasks;
     }
     public createTask(task: Task){
       this.tasks.push(task);
     }
-    public finishTask(index: number){
+    public finishTask(index: number) {
       this.tasks.splice(index, 1);
     }
 }

@@ -8,12 +8,12 @@ import { TaskService } from '../task.service';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  tasks: Task[];
+  tasks: Task [];
   
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
     this.tasks=this.taskService.getTasks();
   }
-
+  
 }

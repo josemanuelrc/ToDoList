@@ -2,13 +2,13 @@
     <h4>New Task</h4>
     <form class="form-group" >
         <label for="name">Name: </label>
-        <input type="text" class="form-control" id="name" name="description" [(ngModel)]="task.name">
+        <input type="text" class="form-control" id="name" name="description" [(ngModel)]="name">
         <label for="description">Description: </label>
         <textarea 
             class="form-control" 
             id="description" 
             name="description" 
-            [(ngModel)]="task.description"
+            [(ngModel)]="description"
             cols="30" 
             rows="10"
             style="resize: none">
